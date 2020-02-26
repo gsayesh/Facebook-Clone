@@ -7,16 +7,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+import com.example.facebookclone.data.DataBase;
 import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
 
+    DataBase db;
     ViewPager viewPager;
 
     MyFragmentAdaptor myFragmentAdaptor;
 
     TabLayout tabLayout;
-    EditText name,age,marks;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,14 +34,11 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(myFragmentAdaptor);
 
         tabLayout.setupWithViewPager(viewPager);
-        name = findViewById(R.id.Name);
-        age  = findViewById(R.id.Age);
-        marks = findViewById(R.id.Marks);
+        db = new DataBase(this,DataBase.DB_NAME,null,DataBase.DB_VERSION);
+
 
     }
-    public void insert(View view){
 
-    }
 
 
 }

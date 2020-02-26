@@ -54,7 +54,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <Button
-            android:onClick="insert"
+            android:id="@+id/insert"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Insert"

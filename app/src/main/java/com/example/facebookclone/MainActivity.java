@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -14,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     MyFragmentAdaptor myFragmentAdaptor;
 
     TabLayout tabLayout;
+    EditText name,age,marks;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +32,12 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(myFragmentAdaptor);
 
         tabLayout.setupWithViewPager(viewPager);
+        name = findViewById(R.id.Name);
+        age  = findViewById(R.id.Age);
+        marks = findViewById(R.id.Marks);
+
+    }
+    public void insert(View view){
 
     }
 

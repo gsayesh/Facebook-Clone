@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
@@ -56,15 +57,12 @@ public class DataBase extends SQLiteOpenHelper {
         else
             return true;
     }
-//    public void getAllStudent(){
-//        SQLiteDatabase db = getWritableDatabase();
-//
-//        Cursor cursor = db.rawQuery(SELECT_STUDENT,null);
-//
-//        if (cursor.moveToFirst()){
-//            do {
-//                Log.d(TAG,"getAllStudent: "+"id :"+cursor.getString(cursor.getColumnIndex(STUDENT_ID))+"Name :"+cursor.getString(cursor.getColumnIndex(STUDENT_NAME))+" Age :"+cursor.getInt(cursor.getColumnIndex(STUDENT_AGE))+" Marks :"+cursor.getInt(cursor.getColumnIndex(STUDENT_MARKS)));
-//            }while (cursor.moveToNext());
-//        }
-//    }
+
+    public Cursor getAllStudent(){
+        SQLiteDatabase db = getWritableDatabase();
+
+        Cursor cursor = db.rawQuery("SELECT * FROM " + STUDENT_TABLE,null);
+
+        return cursor;
+    }
 }

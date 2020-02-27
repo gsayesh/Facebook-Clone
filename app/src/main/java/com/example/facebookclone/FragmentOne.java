@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -43,8 +44,12 @@ public class FragmentOne extends Fragment {
         insert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                db.insertStudent("name: "+name.getText().toString(),"age: "+age.getText().toString(),"mark: "+marks.getText().toString());
+                db.insertStudent(name.getText().toString(), age.getText().toString(), marks.getText().toString());
             }
         });
+
+
     }
+
+
 }

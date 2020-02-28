@@ -20,7 +20,6 @@ public class MyFragmentAdaptor extends FragmentPagerAdapter {
             case 0: return FragmentOne.newInstance();
             case 1: return FragmentTwo.newInstance();
             case 2: return FragmentThree.newInstance();
-            case 3: return FragmentFour.newInstance();
             default: return FragmentOne.newInstance();
         }
 
@@ -28,12 +27,12 @@ public class MyFragmentAdaptor extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 4;
+        return 3;
     }
 
     @Nullable
     @Override
     public CharSequence getPageTitle(int position) {
-        return "Page " + (position+1);
+        return null;
     }
 }

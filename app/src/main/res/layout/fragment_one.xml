@@ -2,7 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#042AA7">
+    android:background="#466EF0">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Insert Student Data"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#50F852"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"></TextView>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -12,7 +21,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Name:"
-            android:textSize="32sp"></TextView>
+            android:textSize="32sp"
+            android:textColor="#000"
+            android:textStyle="italic"></TextView>
         <EditText
             android:id="@+id/Name"
             android:layout_width="match_parent"
@@ -27,7 +38,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Age:"
-            android:textSize="32sp"></TextView>
+            android:textSize="32sp"
+            android:textColor="#000"
+            android:textStyle="italic"></TextView>
         <EditText
             android:id="@+id/Age"
             android:layout_width="match_parent"
@@ -42,7 +55,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Marks:"
-            android:textSize="32sp"></TextView>
+            android:textSize="32sp"
+            android:textColor="#000"
+            android:textStyle="italic"></TextView>
         <EditText
             android:id="@+id/Marks"
             android:layout_width="match_parent"
@@ -57,9 +72,11 @@
             android:id="@+id/insert"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Insert"
+            android:text="@string/insert"
             android:textSize="24sp"
-            android:layout_marginLeft="250dp"></Button>
+            android:layout_marginLeft="250dp"
+            android:background="#4ED105"
+            ></Button>
     </LinearLayout>
 
 </LinearLayout>

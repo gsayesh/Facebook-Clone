@@ -36,6 +36,9 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(viewPager);
         db = new DataBase(this,DataBase.DB_NAME,null,DataBase.DB_VERSION);
 
+        tabLayout.getTabAt(0).setIcon(R.drawable.home);
+        tabLayout.getTabAt(1).setIcon(R.drawable.search);
+        tabLayout.getTabAt(2).setIcon(R.drawable.view);
 
     }
 

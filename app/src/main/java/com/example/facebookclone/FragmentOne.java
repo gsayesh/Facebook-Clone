@@ -44,7 +44,12 @@ public class FragmentOne extends Fragment {
         insert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                db.insertStudent(name.getText().toString(), age.getText().toString(), marks.getText().toString());
+                boolean value = db.insertStudent(name.getText().toString(), age.getText().toString(), marks.getText().toString());
+                if (value == true){
+                    name.setText(" ");
+                    age.setText(" ");
+                    marks.setText(" ");
+                }
             }
         });
 
